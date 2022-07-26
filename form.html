@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.min.js">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/popper.min.js">
+    <script src="welcome.js"></script>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-end mt-50 mb-10"
+        style="background-color: lightblue; height:auto;">
+        <div>
+            <img src="https://img.freepik.com/free-vector/authentication-concept-illustration_114360-2168.jpg?size=338&ext=jpg&ga=GA1.2.777073396.1599399655"
+                alt="user" height="500px" width="600px" style="margin: 50px;">
+        </div>
+        <div class="container m-10 w-500" style="background-color: lightgray; height:auto;">
+            <form action="#" name="myform" method="post" class="was-validated"
+                onsubmit="return mySubmitFunction(event)">
+                <h3><i>User Registration</i></h3>
+                <input type="hidden" id="hide" name="hidden" value="">
+                <div class="row">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" value="" required><br>
+                    <div class="valid-feedback">
+                        valid
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your Name.
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="emaila">Email</label><br>
+                    <input type="email" id="emaila" name="email" value="" required><br>
+                    <div class="valid-feedback">
+                        valid
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your EMail.
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="dob">Date Of Birth</label><br>
+                    <input type="date" id="dob" name="dateofbirth" value="" required><br>
+                    <div class="valid-feedback">
+                        valid
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your Date Of Birth.
+                    </div>
+
+                </div>
+                <label>Gender</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <div class="row">
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" id="phone" name="phonenumber" value="" required><br>
+                    <div class="valid-feedback">
+                        valid
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your valid Phone Number.
+                    </div>
+                </div>
+                <label>Hobbies</label><br>
+                <input type="checkbox" id="hobbies" name="hobbies" value="cricket">
+                <label for="hobbies">Cricket</label><br>
+                <input type="checkbox" id="hobbies1" name="hobbies" value="football">
+                <label for="hobbies1">FootBall</label><br>
+                <input type="checkbox" id="hobbies2" name="hobbies" value="songs">
+                <label for="hobbies2">songs</label><br>
+                <input type="checkbox" id="hobbies3" name="hobbies" value="Others">
+                <label for="hobbies3">Others..</label><br>
+                <div class="row">
+                    <label>Address</label><br>
+                    <textarea name="add" id="address" cols="30" rows="4" required></textarea><br><br>
+
+                    <div class="valid-feedback">
+                        valid
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter your permanent address.
+                    </div>
+                </div>
+                <div class="row gy-1">
+                    <button class="btn btn-block btn-primary " id="but" type="submit" onclick="execute()">Submit</button>
+                    <br>
+                    <button class="btn btn-block float-end btn-primary" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p id="demo"></p>
+</body>
+
+</html>
+
+
+
+
+<!-- 
+-------------------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.min.js">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/home/assistanz/Desktop/sample/bootstrap/popper.min.js">
+    <script src="welcome.js"></script>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-end "
+        style="background-color: lightblue; margin-top:50px; margin-bottom:10px;height:auto;">
+        <div>
+            <img src="https://img.freepik.com/free-vector/authentication-concept-illustration_114360-2168.jpg?size=338&ext=jpg&ga=GA1.2.777073396.1599399655"
+                alt="user" height="500px" width="600px" style="margin: 50px;">
+        </div>
+        <div class="container" style="background-color: lightgray; margin:10px; height:auto; width:500px;">
+            <form action="#" name="myform" style="font-family:cursive" method="post"
+                onsubmit="return mySubmitFunction(event)">
+                <h3 style="font-family:cursive"><i>User Registration</i></h3>
+                <input type="hidden" id="hide" name="hidden" value="">
+                <div class="row">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" value=""><br>
+                    <label for="emaila">Email</label><br>
+                    <input type="email" id="emaila" name="email" value=""><br>
+                    <label for="dob">Date Of Birth</label><br>
+                    <input type="date" id="dob" name="dateofbirth" value=""><br>
+                    <label>Gender</label><br>
+                </div>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label><br>
+                <div class="row">
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" id="phone" name="phonenumber" value=""><br>
+                </div>
+                <label>Hobbies</label><br>
+                <input type="checkbox" id="hobbies" name="hobbies" value="cricket">
+                <label for="hobbies">Cricket</label><br>
+                <input type="checkbox" id="hobbies1" name="hobbies" value="football">
+                <label for="hobbies1">FootBall</label><br>
+                <input type="checkbox" id="hobbies2" name="hobbies" value="songs">
+                <label for="hobbies2">songs</label><br>
+                <div class="row">
+                    <label>Address</label><br>
+                    <textarea name="add" id="address" cols="30" rows="4"></textarea><br><br>
+                </div>
+                <div class="row gy-1">
+                    <button class="btn btn-block btn-primary " type="submit" onclick="execute()">Submit</button>
+                    <br>
+                    <button class="btn btn-block float-end btn-primary" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p id="demo"></p>
+</body>
+
+</html> -->
